@@ -8,10 +8,10 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    
+
     permissions:
-      contents: read
-      packages: write
+      packages: write  # Allows writing to the GitHub Container Registry (GHCR)
+      contents: read   # Allows reading repository contents (default for most workflows)
 
     steps:
       # Checkout the repository
