@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-
-permissions:
-  packages: write  # Allows writing to the GitHub Container Registry (GHCR)
-  contents: read   # Allows reading repository contents (default for most workflows)
-  
+      
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    
+    permissions:
+      packages: write  # Allows writing to the GitHub Container Registry (GHCR)
+      contents: read   # Allows reading repository contents (default for most workflows)
 
     steps:
       # Checkout the repository
